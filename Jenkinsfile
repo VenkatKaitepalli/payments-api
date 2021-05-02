@@ -26,10 +26,15 @@ pipeline {
                     echo "Start the deploy .."
                  } 
                  }
-                 stage('Prod') {
+                 stage('Approval Workflow') {
                  steps {
-                    echo "App is Prod Ready"
+                    input "Are we ready to deploy to Sprint"
                  }
+                 }
+                 stage('Deploy to Sprint') {
+                 steps {
+                    echo "Start the deploy .."
+                 } 
                  }
             }
 }
