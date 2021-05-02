@@ -5,7 +5,12 @@ pipeline {
                  steps {
                      echo 'Starting to build the App.'
                  }
-                 }                 
+                 }
+                 stage('Check DB changes and Deploy') {
+                 steps {
+                     echo 'Starting to build the App.'
+                 }
+                 }                   
                  stage('Unit Test') {
                  steps {
                      echo 'Starting to build the App.'
