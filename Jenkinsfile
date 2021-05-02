@@ -4,7 +4,8 @@ pipeline {
                  stage('Configs') {
                  steps {
                      echo 'Starting to build the App.'
-                 }                  
+                 }
+                 }                 
                  stage('Unit Test') {
                  steps {
                      echo 'Starting to build the App.'
@@ -13,6 +14,7 @@ pipeline {
                  stage('Code Analysis') {
                  steps {
                     input('Starting Junit the App.')
+                 }
                  }
                  stage('Build') {
                  steps {
@@ -25,12 +27,12 @@ pipeline {
                                 echo "Start the deploy .."
                            } 
                            }
-                           }
+                 }
                  stage('Prod') {
                      steps {
                                 echo "App is Prod Ready"
                               }
                  
-              }
-}
+                 }
+            }
 }
