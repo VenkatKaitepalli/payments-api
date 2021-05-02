@@ -13,26 +13,23 @@ pipeline {
                  }
                  stage('Code Analysis') {
                  steps {
-                    input('Starting Junit the App.')
+                    echo('Starting Junit the App.')
                  }
                  }
                  stage('Build') {
                  steps {
-                    input('Starting Junit the App.')
+                    echo('Starting Junit the App.')
                  }
                  }
                  stage('Deploy to Development') {
-                           stage('Deploy start ') {
-                           steps {
-                                echo "Start the deploy .."
-                           } 
-                           }
+                 steps {
+                    echo "Start the deploy .."
+                 } 
                  }
                  stage('Prod') {
-                     steps {
-                                echo "App is Prod Ready"
-                              }
-                 
+                 steps {
+                    echo "App is Prod Ready"
+                 }
                  }
             }
 }
