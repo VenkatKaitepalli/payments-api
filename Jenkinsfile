@@ -5,6 +5,16 @@ pipeline {
                  steps {
                      echo 'Starting to build the App.'
                  }
+                 }
+                 stage('Check DB changes and Deploy') {
+                 steps {
+                     echo 'Starting to build the App.'
+                 }
+                 }                  
+                 stage('Setup Ephemeral project') {
+                 steps {
+                    echo "Start the deploy .."
+                 } 
                  }                 
                  stage('Unit Test') {
                  steps {
