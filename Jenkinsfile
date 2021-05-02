@@ -20,24 +20,10 @@ pipeline {
                  }
                  }
                  stage('Deploy to Development') {
-                 parallel { 
-                            stage('Deploy start ') {
+                           stage('Deploy start ') {
                            steps {
                                 echo "Start the deploy .."
                            } 
-                           }
-                            stage('Deploying now') {
-                            agent {
-                                    docker {
-                                            reuseNode true
-                                            image ‘nginx’
-                                           }
-                                    }
-                            
-                              steps {
-                                echo "Docker Created"
-                              }
-                           }
                            }
                            }
                  stage('Prod') {
